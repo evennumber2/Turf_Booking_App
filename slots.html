@@ -1,0 +1,83 @@
+<!-- src/main/resources/static/slots.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Turf Booking | Slots</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Poppins:wght@600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <script defer src="js/slots.js"></script>
+</head>
+<body data-page="slots">
+<header class="topbar">
+    <div class="shell topbar-inner">
+        <a class="brand" href="home.html">
+            <span class="brand-mark">TB</span>
+            <span>Turf Booking</span>
+        </a>
+        <div class="actions">
+            <a class="btn secondary" href="home.html">Home</a>
+            <button class="btn secondary" type="button" data-logout>Logout</button>
+        </div>
+    </div>
+</header>
+
+<main class="page">
+    <div class="shell">
+        <div class="toolbar">
+            <div>
+                <h1 id="slotTurfName" class="hero-title">Select a slot</h1>
+                <p id="slotTurfMeta" class="hero-sub"></p>
+            </div>
+            <div class="field">
+                <label for="slotDate">Date</label>
+                <input id="slotDate" type="date">
+            </div>
+        </div>
+
+        <div class="slot-layout mt">
+            <section class="plain-panel">
+                <div class="toolbar">
+                    <h2>Available times</h2>
+                    <p id="slotStatus" class="meta" aria-live="polite">Loading slots...</p>
+                </div>
+                <div id="slotGrid" class="slot-grid" aria-live="polite"></div>
+            </section>
+
+            <aside class="summary-panel">
+                <h2>Selected Slot</h2>
+                <div class="summary-line">
+                    <span>Date</span>
+                    <strong id="summaryDate">--</strong>
+                </div>
+                <div class="summary-line">
+                    <span>Time</span>
+                    <strong id="summaryTime">--</strong>
+                </div>
+                <div class="summary-line">
+                    <span>Base price</span>
+                    <strong id="summaryBase">&#8377;0</strong>
+                </div>
+                <div class="toggle-line">
+                    <label for="lightsToggle">With lights</label>
+                    <input id="lightsToggle" type="checkbox">
+                </div>
+                <div class="summary-line">
+                    <span>Lights surcharge</span>
+                    <strong id="summaryLights">&#8377;0</strong>
+                </div>
+                <div class="summary-line">
+                    <span>Total</span>
+                    <strong id="summaryTotal">&#8377;0</strong>
+                </div>
+                <button id="payButton" class="btn mt" type="button" disabled>Proceed to Pay</button>
+            </aside>
+        </div>
+    </div>
+</main>
+<div id="toast" class="toast hidden" role="status" aria-live="polite"></div>
+</body>
+</html>

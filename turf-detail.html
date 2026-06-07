@@ -1,0 +1,68 @@
+<!-- src/main/resources/static/turf-detail.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Turf Booking | Turf Details</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Poppins:wght@600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <script defer src="js/app.js"></script>
+</head>
+<body data-page="detail">
+<header class="topbar">
+    <div class="shell topbar-inner">
+        <a class="brand" href="home.html">
+            <span class="brand-mark">TB</span>
+            <span>Turf Booking</span>
+        </a>
+        <div class="actions">
+            <a class="btn secondary" href="turfs.html">Turfs</a>
+            <button class="btn secondary" type="button" data-logout>Logout</button>
+        </div>
+    </div>
+</header>
+
+<main class="page">
+    <div id="detailRoot" class="shell detail-layout">
+        <section>
+            <img id="detailImage" class="detail-image" src="https://images.unsplash.com/photo-1459865264687-595d652de67e?auto=format&fit=crop&w=1200&q=80" alt="Turf">
+        </section>
+
+        <aside class="detail-panel">
+            <span class="pill">Turf Details</span>
+            <h1 id="detailName">Loading turf...</h1>
+            <p id="detailMeta" class="meta"></p>
+            <p id="detailDescription"></p>
+
+            <section aria-label="Pricing">
+                <h2>Pricing</h2>
+                <div class="pricing-grid">
+                    <div class="price-box">
+                        <span>Weekday rate</span>
+                        <strong id="weekdayPrice">&#8377;0 per hour</strong>
+                    </div>
+                    <div class="price-box">
+                        <span>Weekend rate</span>
+                        <strong id="weekendPrice">&#8377;0 per hour</strong>
+                    </div>
+                    <div class="price-box">
+                        <span>With lights</span>
+                        <strong id="lightsPrice">&#8377;0 extra per hour</strong>
+                    </div>
+                </div>
+            </section>
+
+            <section aria-label="Amenities">
+                <h2>Amenities</h2>
+                <div id="amenities" class="amenities-grid"></div>
+            </section>
+
+            <a id="bookNow" class="btn mt" href="slots.html">Book Now</a>
+        </aside>
+    </div>
+</main>
+</body>
+</html>

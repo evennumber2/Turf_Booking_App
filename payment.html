@@ -1,0 +1,61 @@
+<!-- src/main/resources/static/payment.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Turf Booking | Payment</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Poppins:wght@600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <script defer src="js/payment.js"></script>
+</head>
+<body data-page="payment">
+<header class="topbar">
+    <div class="shell topbar-inner">
+        <a class="brand" href="home.html">
+            <span class="brand-mark">TB</span>
+            <span>Turf Booking</span>
+        </a>
+        <div class="actions">
+            <a class="btn secondary" href="slots.html">Slots</a>
+            <button class="btn secondary" type="button" data-logout>Logout</button>
+        </div>
+    </div>
+</header>
+
+<main class="page">
+    <div class="shell">
+        <h1 class="hero-title">Payment</h1>
+        <div class="payment-grid mt">
+            <section class="plain-panel">
+                <h2>Booking Summary</h2>
+                <div id="paymentSummary"></div>
+                <form id="paymentForm" class="form mt" novalidate>
+                    <div class="field">
+                        <label for="amount">Amount</label>
+                        <div class="amount-field">
+                            <span>&#8377;</span>
+                            <input id="amount" type="number" min="1" step="1">
+                        </div>
+                    </div>
+                    <button id="confirmPayment" class="btn" type="submit">
+                        <span data-button-label>Confirm Payment</span>
+                        <span id="paymentSpinner" class="spinner hidden" aria-hidden="true"></span>
+                    </button>
+                    <p id="paymentMessage" class="error" aria-live="polite"></p>
+                </form>
+            </section>
+
+            <aside class="qr-box">
+                <img id="qrImage" src="" alt="Fake QR code">
+                <div class="pill">UPI ID</div>
+                <strong id="upiId">turfbooking@fakeupi</strong>
+            </aside>
+        </div>
+    </div>
+</main>
+<div id="toast" class="toast hidden" role="status" aria-live="polite"></div>
+</body>
+</html>

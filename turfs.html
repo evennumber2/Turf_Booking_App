@@ -1,0 +1,61 @@
+<!-- src/main/resources/static/turfs.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Turf Booking | Turfs</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Poppins:wght@600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <script defer src="js/app.js"></script>
+</head>
+<body data-page="turfs">
+<header class="topbar">
+    <div class="shell topbar-inner">
+        <a class="brand" href="home.html">
+            <span class="brand-mark">TB</span>
+            <span>Turf Booking</span>
+        </a>
+        <div class="actions">
+            <a class="btn secondary" href="home.html">Home</a>
+            <button class="btn secondary" type="button" data-logout>Logout</button>
+        </div>
+    </div>
+</header>
+
+<main class="page">
+    <div class="shell">
+        <div class="toolbar">
+            <div>
+                <h1 id="listingTitle" class="hero-title">Turfs</h1>
+                <p id="listingSub" class="hero-sub"></p>
+            </div>
+        </div>
+
+        <div class="filter-bar" aria-label="Turf filters">
+            <div class="range-wrap">
+                <label for="priceRange">Max price</label>
+                <input id="priceRange" type="range" min="0" max="5000" step="50" value="5000">
+                <strong id="priceValue">&#8377;5,000</strong>
+            </div>
+            <div class="field">
+                <label for="sortPrice">Sort by price</label>
+                <select id="sortPrice">
+                    <option value="asc">Low to high</option>
+                    <option value="desc">High to low</option>
+                </select>
+            </div>
+        </div>
+
+        <section id="turfGrid" class="cards-grid mt" aria-live="polite">
+            <div class="empty-state" style="grid-column: 1 / -1;">
+                <div class="spinner" aria-hidden="true"></div>
+                <p class="meta">Loading turfs...</p>
+            </div>
+        </section>
+    </div>
+</main>
+</body>
+</html>

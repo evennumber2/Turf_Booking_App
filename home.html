@@ -1,0 +1,76 @@
+<!-- src/main/resources/static/home.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Turf Booking | Home</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Poppins:wght@600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <script defer src="js/app.js"></script>
+</head>
+<body data-page="home">
+<header class="topbar">
+    <div class="shell topbar-inner">
+        <a class="brand" href="home.html">
+            <span class="brand-mark">TB</span>
+            <span>Turf Booking</span>
+        </a>
+        <button class="btn secondary" type="button" data-logout>Logout</button>
+    </div>
+</header>
+
+<section class="hero-band">
+    <div class="shell">
+        <h1 id="greeting" class="hero-title">Hello, Player!</h1>
+        <p class="hero-sub">Choose your city and sport for the next match.</p>
+
+        <form id="findForm" novalidate>
+            <div class="search-grid">
+                <div class="field">
+                    <label for="city">City or town</label>
+                    <input id="city" name="city" type="text" autocomplete="address-level2" placeholder="Chennai, Bangalore, Hyderabad">
+                </div>
+                <button id="locationBtn" class="btn secondary" type="button">Use my location</button>
+            </div>
+            <p id="locationStatus" class="success" aria-live="polite"></p>
+            <p id="homeError" class="error" aria-live="polite"></p>
+
+            <div class="sports-grid" aria-label="Sport selector">
+                <button class="sport-card selected" type="button" data-sport="Cricket" aria-pressed="true">
+                    <span class="sport-icon" aria-hidden="true">&#127951;</span>
+                    <strong>Cricket</strong>
+                </button>
+                <button class="sport-card" type="button" data-sport="Football">
+                    <span class="sport-icon" aria-hidden="true">&#9917;</span>
+                    <strong>Football</strong>
+                </button>
+                <button class="sport-card" type="button" data-sport="Basketball">
+                    <span class="sport-icon" aria-hidden="true">&#127936;</span>
+                    <strong>Basketball</strong>
+                </button>
+                <button class="sport-card" type="button" data-sport="Badminton">
+                    <span class="sport-icon" aria-hidden="true">&#127992;</span>
+                    <strong>Badminton</strong>
+                </button>
+                <button class="sport-card" type="button" data-sport="Volleyball">
+                    <span class="sport-icon" aria-hidden="true">&#127952;</span>
+                    <strong>Volleyball</strong>
+                </button>
+                <button class="sport-card" type="button" data-sport="Tennis">
+                    <span class="sport-icon" aria-hidden="true">&#127934;</span>
+                    <strong>Tennis</strong>
+                </button>
+                <button class="sport-card" type="button" data-sport="Other">
+                    <span class="sport-icon" aria-hidden="true">&#9679;</span>
+                    <strong>Other</strong>
+                </button>
+            </div>
+            <button class="btn" type="submit">Find Turfs</button>
+        </form>
+    </div>
+</section>
+</body>
+</html>

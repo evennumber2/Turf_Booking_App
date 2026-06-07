@@ -1,0 +1,110 @@
+<!-- src/main/resources/static/index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Turf Booking | Login</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Poppins:wght@600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <script defer src="js/auth.js"></script>
+</head>
+<body>
+<main class="auth-page">
+    <section class="auth-visual" aria-label="Indoor stadium turf">
+        <a class="brand" href="index.html">
+            <span class="brand-mark">TB</span>
+            <span>Turf Booking</span>
+        </a>
+        <div class="auth-copy">
+            <h1>Book indoor stadium time without the back-and-forth.</h1>
+            <p>Find turfs by city and sport, reserve a slot, and finish with a simple confirmation flow.</p>
+        </div>
+    </section>
+
+    <section class="auth-panel">
+        <div>
+            <a class="brand" href="index.html">
+                <span class="brand-mark">TB</span>
+                <span>Turf Booking</span>
+            </a>
+            <div class="tabs" role="tablist" aria-label="Authentication">
+                <button class="tab active" type="button" data-tab="login">Login</button>
+                <button class="tab" type="button" data-tab="register">Register</button>
+            </div>
+
+            <form id="loginForm" class="form" novalidate>
+                <div class="field">
+                    <label for="loginIdentifier">Email or mobile number</label>
+                    <input id="loginIdentifier" name="identifier" type="text" autocomplete="username" required>
+                </div>
+                <div class="field">
+                    <label for="loginPassword">Password</label>
+                    <input id="loginPassword" name="password" type="password" autocomplete="current-password" required>
+                </div>
+                <div class="actions">
+                    <button id="loginSubmit" class="btn" type="submit">
+                        <span data-button-label>Login</span>
+                        <span class="spinner hidden" aria-hidden="true"></span>
+                    </button>
+                    <button id="forgotLink" class="link-btn" type="button">Forgot Password</button>
+                </div>
+                <p id="loginError" class="error" aria-live="polite"></p>
+            </form>
+
+            <form id="forgotForm" class="form hidden mt" novalidate>
+                <div class="field">
+                    <label for="forgotDestination">Email or mobile number</label>
+                    <input id="forgotDestination" name="destination" type="text" autocomplete="username">
+                </div>
+                <button id="forgotSubmit" class="btn secondary" type="submit">
+                    <span data-button-label>Send reset link</span>
+                    <span class="spinner hidden" aria-hidden="true"></span>
+                </button>
+                <p id="forgotMessage" class="success" aria-live="polite"></p>
+            </form>
+
+            <form id="registerForm" class="form hidden" novalidate>
+                <div class="field">
+                    <label for="regName">Name</label>
+                    <input id="regName" name="name" type="text" autocomplete="name" required>
+                </div>
+                <div class="form-row">
+                    <div class="field">
+                        <label for="regEmail">Email</label>
+                        <input id="regEmail" name="email" type="email" autocomplete="email" required>
+                    </div>
+                    <div class="field">
+                        <label for="regMobile">Mobile</label>
+                        <input id="regMobile" name="mobile" type="tel" inputmode="numeric" minlength="10" maxlength="10" autocomplete="tel" required>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="field">
+                        <label for="regPassword">Password</label>
+                        <input id="regPassword" name="password" type="password" autocomplete="new-password" required>
+                    </div>
+                    <div class="field">
+                        <label for="regConfirmPassword">Confirm Password</label>
+                        <input id="regConfirmPassword" name="confirmPassword" type="password" autocomplete="new-password" required>
+                    </div>
+                </div>
+                <div id="otpBlock" class="field hidden">
+                    <label for="otp">OTP</label>
+                    <input id="otp" name="otp" type="text" inputmode="numeric" minlength="6" maxlength="6" autocomplete="one-time-code">
+                    <button id="resendOtp" class="link-btn" type="button">Resend OTP</button>
+                </div>
+                <button id="registerSubmit" class="btn" type="submit">
+                    <span data-button-label>Send OTP</span>
+                    <span class="spinner hidden" aria-hidden="true"></span>
+                </button>
+                <p id="registerError" class="error" aria-live="polite"></p>
+                <p id="registerSuccess" class="success" aria-live="polite"></p>
+            </form>
+        </div>
+    </section>
+</main>
+</body>
+</html>

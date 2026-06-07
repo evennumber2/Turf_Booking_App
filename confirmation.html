@@ -1,0 +1,44 @@
+<!-- src/main/resources/static/confirmation.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Turf Booking | Confirmation</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Poppins:wght@600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <script defer src="js/app.js"></script>
+</head>
+<body data-page="confirmation">
+<header class="topbar">
+    <div class="shell topbar-inner">
+        <a class="brand" href="home.html">
+            <span class="brand-mark">TB</span>
+            <span>Turf Booking</span>
+        </a>
+        <button class="btn secondary" type="button" data-logout>Logout</button>
+    </div>
+</header>
+
+<main class="page">
+    <div class="shell plain-panel success-wrap">
+        <div class="checkmark" aria-hidden="true"></div>
+        <div>
+            <h1>Booking Confirmed!</h1>
+            <p class="meta">Reference <strong id="bookingRef">--</strong></p>
+        </div>
+
+        <section id="confirmationSummary" class="plain-panel" aria-label="Booking summary"></section>
+
+        <div class="actions">
+            <a class="btn" href="home.html">Book Another Slot</a>
+            <button id="viewBookings" class="btn secondary" type="button">View My Bookings</button>
+        </div>
+
+        <section id="bookingHistory" class="booking-list hidden" aria-live="polite"></section>
+    </div>
+</main>
+</body>
+</html>
